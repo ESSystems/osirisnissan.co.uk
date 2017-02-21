@@ -1,0 +1,41 @@
+#!/bin/bash
+
+DEST_DB=clinicmanager
+#MYSQL_USER="-u root"
+#MYSQL_PASSWORD=-p{your-password-here}
+
+MDB_FILE=$1
+TEMP_DB=ioh_orig
+
+#
+# Create temporary DB and import the whole MDB into it
+#
+echo "CREATE DATABASE $TEMP_DB" | mysql $MYSQL_USER $MYSQL_PASSWORD
+
+# Export schema
+mdb-schema -S "$MDB_FILE" mysql | sed -e 's/^DROP TABLE/DROP TABLE IF EXISTS/' | sed -e 's/date,/datetime,/' | mysql $MYSQL_USER $MYSQL_PASSWORD $TEMP_DB
+
+TABLES=`mdb-tables -1 "$MDB_FILE" | sed -e 's/ /@/'`
+
+for table in $TABLES
+do
+	t=`echo $table | sed -e 's/@/ /'`
+	mdb-export -S -I -H -D "%F %T" -d \, -q \" -X \\ "$MDB_FILE" "$t" | sed -e 's/)$/)\;/' | mysql $MYSQL_USER $MYSQL_PASSWORD $TEMP_DB
+done
+
+#
+# Create final DB, transfer only required tables and ALTER them if needed.
+#
+echo "CREATE DATABASE $DEST_DB" | mysql $MYSQL_USER $MYSQL_PASSWORD
+
+TABLE=`cat tablelist.txt`
+mysqldump $MYSQL_USER $MYSQL_PASSWORD $TEMP_DB $TABLE | mysql $MYSQL_USER $MYSQL_PASSWORD $DEST_DB
+
+mysql $MYSQL_USER $MYSQL_PASSWORD $DEST_DB < patch_db.sql
+
+#
+# Drop temporary DB and exit
+#
+echo "DROP DATABASE $TEMP_DB" | mysql $MYSQL_USER $MYSQL_PASSWORD
+
+echo "Transfer finished."

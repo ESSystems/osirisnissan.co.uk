@@ -1,0 +1,4 @@
+2013-04-18 09:24:35 Warning: Warning (2): get_object_vars() expects parameter 1 to be object, null given in [CORE/cake/libs/model/connection_manager.php, line 197]
+2013-04-25 14:09:35 Error: Parameters were set for this type: condition: attendance_id with value: 5
+2013-04-25 14:09:35 Error: Upload document for attachable type: AttendanceFeedback and id 35 asociatie proprietari - sediu RGP.pdf
+2013-04-25 14:09:35 Error: Upload document started

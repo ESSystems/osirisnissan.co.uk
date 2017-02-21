@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+h1 {
+	font-size:21pt;
+}
+
+h2 {
+	font-size: 17pt;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 2em;
+	font-size: 9pt;
+}
+
+table thead {
+	background-color: #ccc;
+}
+
+table td, table th {
+	border: 1px solid #888;
+	font-size: 1.1em;
+	padding: 3px 5px;
+	vertical-align: top;
+}
+
+.page-break {
+	page-break-after: always;
+}

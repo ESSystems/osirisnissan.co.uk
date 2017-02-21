@@ -1,0 +1,1 @@
+ALTER TABLE  `nemployees` ADD  `work_schedule_rule` VARCHAR( 64 ) NULL;

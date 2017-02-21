@@ -1,0 +1,96 @@
+#ATTENTION!
+#
+#DO NOT MODIFY THIS FILE BECAUSE IT WAS GENERATED AUTOMATICALLY,
+#SO ALL YOUR CHANGES WILL BE LOST THE NEXT TIME THE FILE IS GENERATED.
+#
+#IF YOU REQUIRE TO APPLY CUSTOM MODIFICATIONS, PERFORM THEM IN THE  FOLLOWING FILES:
+
+#/var/www/vhosts/osirisnissan.co.uk/conf/vhost.conf
+
+<VirtualHost 87.106.136.226:80 >
+    ServerName "osirisnissan.co.uk"
+        ServerAlias  "www.osirisnissan.co.uk"
+                        ServerAlias  "ipv4.osirisnissan.co.uk"
+            	UseCanonicalName Off
+
+
+<IfModule mod_suexec.c>
+    SuexecUserGroup "osiris" "psacln"
+</IfModule>
+
+    ServerAdmin  "u72823190@s463656756.websitehome.co.uk"
+
+	DocumentRoot "/var/www/vhosts/osirisnissan.co.uk/cm2/app/webroot"
+    CustomLog /var/www/vhosts/osirisnissan.co.uk/statistics/logs/access_log plesklog
+    ErrorLog  "/var/www/vhosts/osirisnissan.co.uk/statistics/logs/error_log"
+
+
+
+<IfModule mod_userdir.c>
+    UserDir "/var/www/vhosts/osirisnissan.co.uk/web_users"
+</IfModule>
+
+    ScriptAlias  "/cgi-bin/" "/var/www/vhosts/osirisnissan.co.uk/cgi-bin/"
+
+
+
+    <IfModule mod_ssl.c>
+        SSLEngine off
+    </IfModule>
+
+SetEnv PP_CUSTOM_PHP_INI /var/www/vhosts/osirisnissan.co.uk/etc/php.ini
+
+<IfModule mod_fcgid.c>
+    FcgidInitialEnv PP_CUSTOM_PHP_INI /var/www/vhosts/osirisnissan.co.uk/etc/php.ini
+    FcgidMaxRequestLen 16777216
+</IfModule>
+
+    <Directory /var/www/vhosts/osirisnissan.co.uk/cm2/app/webroot>
+
+<IfModule sapi_apache2.c>
+php_admin_flag engine on
+
+# General settings
+php_admin_flag safe_mode off
+php_admin_value open_basedir "/var/www/vhosts/osirisnissan.co.uk/:/tmp/"
+# Performance settings
+php_admin_value memory_limit 300
+php_admin_value max_execution_time 300
+php_admin_value max_input_time 300
+php_admin_value post_max_size 128M
+php_admin_value upload_max_filesize 50M
+# Additional directives
+php_admin_value date.timezone "Europe/London"
+
+</IfModule>
+
+<IfModule mod_php5.c>
+php_admin_flag engine on
+
+# General settings
+php_admin_flag safe_mode off
+php_admin_value open_basedir "/var/www/vhosts/osirisnissan.co.uk/:/tmp/"
+# Performance settings
+php_admin_value memory_limit 300
+php_admin_value max_execution_time 300
+php_admin_value max_input_time 300
+php_admin_value post_max_size 128M
+php_admin_value upload_max_filesize 50M
+# Additional directives
+php_admin_value date.timezone "Europe/London"
+
+</IfModule>
+
+
+        Options +Includes +ExecCGI
+
+    </Directory>
+
+
+
+
+
+
+
+</VirtualHost>
+

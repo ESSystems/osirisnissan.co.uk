@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+.summary strong {
+	font-weight: bold;
+}
+
+ul.summary {
+	list-style: none;
+	padding-left: 0;
+}
+
+.summary .employee ul span {
+	font-style: italic;
+}
+
+.summary h2 {
+	margin-bottom: 1em;
+}
+
+.summary h3 {
+	margin-bottom: 1em;
+	color: #888;
+}
+
+.summary table {
+	border: 1px solid #000;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+}
+
+.summary table td, .summary table th {
+	border: 1px solid #333;
+	padding: 5px;
+}
+
+.summary p {
+	margin-bottom: 1em;
+}

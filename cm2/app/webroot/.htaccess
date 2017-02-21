@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+    
+    #
+    # Uncomment the following lines to force access via HTTPS ONLY!
+    #
+	#RewriteEngine On 
+	#RewriteCond %{SERVER_PORT} 80 
+	#RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]    
+</IfModule>
+
+#ExpiresActive On
+#ExpiresDefault "access plus 10 years"
+SetOutputFilter DEFLATE
+php_value memory_limit 160M
+php_value upload_max_filesize 100M
+php_value post_max_size 100M

@@ -1,0 +1,8 @@
+#<IfModule headers_module>
+#Header set Expires "Sun, 17 Jan 2038 19:14:07 GMT"
+#</IfModule>
+
+<IfModule expires_module>
+	ExpiresActive On
+	ExpiresDefault "access plus 1 month"
+</IfModule>

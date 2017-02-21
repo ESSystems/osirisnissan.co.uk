@@ -1,0 +1,30 @@
+#header {
+	height: 60px;
+}
+
+#left {
+	float: left;
+	width: 220px;
+	border: 1px solid red;
+	height: 700px;
+}
+
+#main {
+	padding: 1em;
+}
+
+#content{
+	background-color: #fff;
+	color: #333;
+	overflow: auto;
+}
+
+.x-grid3-header-offset{width:auto;}
+
+#msg-div {
+    position:absolute;
+    left:35%;
+    top:10px;
+    width:250px;
+    z-index:20000;
+}

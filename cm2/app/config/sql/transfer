@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SRC_DB=iohnew_orig
+DEST_DB=clinicmanager
+MYSQL_USER=root
+
+TABLE=`cat $1`
+
+
+mysqldump -u $MYSQL_USER $SRC_DB $TABLE | mysql -u $MYSQL_USER $DEST_DB
+

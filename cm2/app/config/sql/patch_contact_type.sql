@@ -1,0 +1,1 @@
+ALTER TABLE  `recall_list_item_events` CHANGE  `contact_type`  `contact_type` ENUM(  'Email 1',  'Email 2',  'Email 3',  'Informed HR',  'Informed HandS',  'Appointment Made',  'Creating List',  'Advised by OH Staff' ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'Advised by OH Staff'

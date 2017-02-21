@@ -1,0 +1,16 @@
+syntax: regexp
+^\.buildpath$
+^\.project$
+^app/tmp$
+^\.settings$
+
+app/webroot/upload
+app/downloads
+
+.DS_Store
+^.*\.sublime-.*$
+
+syntax: regexp
+^files$
+
+app/config/database.php

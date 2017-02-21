@@ -1,0 +1,1 @@
+INSERT INTO  `sec_group` (`group_name` , `status_code`) VALUES ('Site supervisor',  'A');

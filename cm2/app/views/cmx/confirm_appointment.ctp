@@ -1,0 +1,1 @@
+<div id="calendar" start-date="<?php echo $start_date ?>"></div>

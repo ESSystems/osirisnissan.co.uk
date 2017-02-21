@@ -1,0 +1,147 @@
+@import "summary.css";
+
+body {
+	font: normal 13px/16px arial, tahoma, helvetica, sans-serif;
+}
+
+.half {width: 49%;}
+.left {float: left;}
+.right {float: right;}
+
+.cog { background: url(img/cog.gif) no-repeat left center !important; }
+.arrow_rotate_clockwise { background: url(img/arrow_rotate_clockwise.gif) no-repeat left center !important; }
+.arrow_join { background: url(img/arrow_join.gif) no-repeat left center !important; }
+.page_green { background: url(img/page_green.gif) no-repeat left center !important; }
+.page_add { background: url(img/page_add.gif) no-repeat left center !important; }
+.page_edit { background: url(img/page_edit.gif) no-repeat left center !important; }
+.page_gear { background: url(img/page_gear.gif) no-repeat left center !important; }
+.page_find { background: url(img/page_find.gif) no-repeat left center !important; }
+.page_save { background: url(img/page_save.gif) no-repeat left center !important; }
+.page_delete { background: url(img/page_delete.gif) no-repeat left center !important; }
+.printer { background: url(img/printer.gif) no-repeat left center !important; }
+.user { background: url(img/user.gif) no-repeat left center !important; }
+.group { background: url(img/group.gif) no-repeat left center !important; }
+.group_error { background: url(img/group_error.gif) no-repeat left center !important; }
+.wrench_orange { background: url(img/wrench_orange.gif) no-repeat left center !important; }
+.cross { background: url(img/cross.gif) no-repeat left center !important; }
+.time { background: url(img/time.gif) no-repeat left center !important; }
+.key { background: url(img/key.gif) no-repeat left center !important; }
+.exit { background: url(img/exit.gif) no-repeat left center !important; }
+.page_excel { background: url(img/page_excel.gif) no-repeat left center !important; }
+.add { background: url(img/add.gif) no-repeat left center !important; }
+.delete { background: url(img/delete.gif) no-repeat left center !important; }
+.bin_closed { background: url(img/bin_closed.png) no-repeat left center !important; }
+.group_add { background: url(img/group_add.png) no-repeat left center !important; }
+.control_play_blue { background: url(img/control_play_blue.png) no-repeat left center !important; }
+.group_delete { background: url(img/group_delete.png) no-repeat left center !important; }
+.calendar { background: url(img/calendar.png) no-repeat left center !important; }
+.filter { background: url(img/filter.png) no-repeat left center !important; }
+.tick { background: url(img/tick.png) no-repeat left center !important; }
+.attach { background: url(img/attach.png) no-repeat left center !important; }
+.mail { background: url(img/mail-medium.png) no-repeat left center !important; }
+.arrow_down { background: url(img/arrow_down.png) no-repeat left center !important; }
+.arrow_up { background: url(img/arrow_up.png) no-repeat left center !important; }
+.refresh { background: url(img/arrow_refresh.png) no-repeat left center !important; }
+.home-page { background: url(img/home_page.png) no-repeat left center !important; }
+.speedometer { background: url(img/speedometer.png) no-repeat left center !important; }
+.private { background: url(img/emblem-readonly.png) no-repeat left center !important; }
+.error { background: url(img/error.png) no-repeat left center !important; }
+.clock { background: url(img/clock.png) no-repeat left center !important; }
+.clock_red { background: url(img/clock_red.png) no-repeat left center !important; }
+
+.icon {
+	background-position: 0px center !important;
+	padding-left: 18px;
+	min-height: 16px;
+}
+
+span.icon {
+	height: 16px;
+	display: block;
+	line-height: 16px;
+}
+
+input.icon {
+	background-position: 3px center !important;
+	padding-left: 22px;
+}
+
+.x-form-item {
+	font-size: 11px;
+}
+
+.x-grid3-row.overdue .x-grid3-td-due { color: #f00; }
+
+#diagnoses-grid .x-grid3-header .x-grid3-hd-inner.x-grid3-hd-checker { background-image: none;}
+#diagnoses-grid .x-grid3-row { background-color: #fff !important; border-color: #fff #ccc #ccc; border-style: solid; }
+#diagnoses-grid .x-grid3-row .x-grid3-cell-inner { color: #888; }
+#diagnoses-grid .x-grid3-row.x-grid3-row-selected .x-grid3-cell-inner { color: #333; font-weight: bold; }
+
+.x-tree-node .x-tree-node-el.obsolete a span { color: #888; } 
+
+.x-grid3-row.overdue { color: red; }
+.x-grid3-row.gray { color: gray; }
+
+.search-item.x-combo-list-item .organisation { float: right; }
+
+.quiet { color: #888; }
+.x-grid3-row.gray { color: gray; }
+
+hr {
+	border: none;
+	border-top: 1px solid #888;
+}
+
+.quiet { color: #888; }
+
+.search-item {
+    font:normal 11px tahoma, arial, helvetica, sans-serif;
+    padding:3px 10px 3px 10px;
+    border:1px solid #fff;
+    border-bottom:1px solid #eeeeee;
+    white-space:normal;
+    color:#555;
+}
+.search-item h3 {
+    display:block;
+    font:inherit;
+    font-weight:bold;
+    color:#222;
+}
+
+.search-item h3 span {
+    float: right;
+    font-weight:normal;
+    margin:0 0 5px 5px;
+    width:100px;
+    display:block;
+    clear:none;
+}
+
+table.details th {
+	font-size: 13px;
+	line-height: 20px;
+    font-weight:bold;
+    color:#000;
+    border-bottom: 1px solid #000;
+    padding: 5px 3px;
+}
+
+table.details td {
+	padding: 3px 10px 3px 3px;
+	border-bottom: 1px solid #eee;
+}
+
+
+.story {
+	font-size: 13px;
+}
+
+.story h1 {
+	font-size: 1.25em;
+	line-height: 2;
+}
+
+.appointment.deleted {
+	color: red;
+}
